@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,18 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        TextView output = (TextView) findViewById(R.id.main_text);
+        output.append("\n");
+
+        final TestGroovyClass testGroovyClass = new TestGroovyClass();
+        testGroovyClass.setName("Bai Jie");
+        output.append(testGroovyClass.getName() + "\n");
+        output.append(testGroovyClass.hello() + "\n");
     }
 
     @Override
