@@ -18,7 +18,7 @@
 
 
 # Groovy
-# remove this?
+# copy from https://github.com/melix/gr8confagenda/blob/17722d8048a2c9bbd3422b23126c696916f68a87/gr8confagenda/proguard-rules.txt
 -dontobfuscate
 -dontwarn org.codehaus.groovy.**
 -dontwarn groovy**
