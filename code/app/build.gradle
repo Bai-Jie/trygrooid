@@ -17,6 +17,7 @@ android {
             getByName(it) {
                 minifyEnabled true
                 proguardFile getDefaultProguardFile('proguard-android.txt')
+                proguardFile 'proguard-rules-groovy.pro'
                 proguardFile 'proguard-rules.pro'
                 //proguardFile 'proguard-rules-debug.pro'
             }
