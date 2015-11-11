@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         testGroovyClass.setName("Bai Jie");
         output.append(testGroovyClass.getName() + "\n");
         output.append(testGroovyClass.hello() + "\n");
+        output.append("tryMetaProgramming:");
+        output.append(testGroovyClass.tryMetaProgramming() + "\n");
     }
 
     @Override

@@ -17,3 +17,5 @@
 #}
 
 
+# CompileDynamic Class
+-keep class gq.baijie.tryit.grooid.Book {*;}
