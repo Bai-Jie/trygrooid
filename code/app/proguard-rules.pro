@@ -15,3 +15,15 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+# Groovy
+# remove this?
+-dontobfuscate
+-dontwarn org.codehaus.groovy.**
+-dontwarn groovy**
+-keep class org.codehaus.groovy.vmplugin.**
+-keep class org.codehaus.groovy.runtime.dgm*
+-keepclassmembers class org.codehaus.groovy.runtime.dgm* {*;}
+-keepclassmembers class ** implements org.codehaus.groovy.runtime.GeneratedClosure {*;}
+-keepclassmembers class org.codehaus.groovy.reflection.GroovyClassValue* {*;}
