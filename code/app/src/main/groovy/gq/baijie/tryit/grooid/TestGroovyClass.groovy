@@ -1,6 +1,7 @@
 package gq.baijie.tryit.grooid
 
-//@CompileStatic
+import groovy.transform.CompileDynamic
+
 class TestGroovyClass {
     String name
 
@@ -8,6 +9,7 @@ class TestGroovyClass {
         "Hello $name"
     }
 
+    @CompileDynamic
     public String tryMetaProgramming() {
         Book.createWithMetaProgramming().titleUp
     }
@@ -20,6 +22,7 @@ class Book {
         title.capitalize()
     }
 
+    @CompileDynamic
     static Book createWithMetaProgramming() {
         final def book = new Book(title:"the stand");
         // object metaClass
