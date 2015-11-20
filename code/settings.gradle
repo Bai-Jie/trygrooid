@@ -8,3 +8,4 @@ include 'services:webservice'
 rootProject.name = 'try-grooid'
 
 include ':try'
+include ':app'
