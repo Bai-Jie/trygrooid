@@ -44,6 +44,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    lintOptions {
+        // TODO remove this when https://issues.apache.org/jira/browse/GROOVY-7296 resolved
+        // groovy runtime library have some references to invalid package on Android
+        warning 'InvalidPackage'
+    }
 }
 
 project.androidGroovy {
