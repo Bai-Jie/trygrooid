@@ -44,6 +44,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'org.codehaus.groovy:groovy:2.4.5:grooid'
+    compile (project(':try')) {
+        // use the 'grooid' classifier of groovy library as above
+        exclude group: 'org.codehaus.groovy', module: 'groovy'
+    }
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
 }
