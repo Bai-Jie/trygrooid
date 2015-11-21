@@ -7,5 +7,5 @@ include 'services:webservice'
 
 rootProject.name = 'try-grooid'
 
-include ':try'
-include ':app'
+include ':domain'
+include ':client:android'

@@ -3,7 +3,7 @@
 def javaSubprojects = []
 
 def groovySubprojects = []
-groovySubprojects << ':try'
+groovySubprojects << ':domain'
 
 (javaSubprojects + groovySubprojects).each { projectPath ->
     project(projectPath) {
