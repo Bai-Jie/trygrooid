@@ -6,6 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.3.0'
         // use snapshot version for compatibility with latest android gradle plugin
 //        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
         classpath 'com.github.groovy:groovy-android-gradle-plugin:-SNAPSHOT'
@@ -16,6 +17,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
 apply plugin: 'groovyx.grooid.groovy-android'
 
 android {
