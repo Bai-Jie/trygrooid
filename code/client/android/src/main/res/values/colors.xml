@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- ~~~~~~~~ black font ~~~~~~~~ -->
+    <!-- alpha: 87% -->
+    <color name="text_black">#DE000000</color>
+    <!-- alpha: 26% -->
+    <color name="text_disabled_or_hint_black">#42000000</color>
 </resources>
