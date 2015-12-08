@@ -12,8 +12,10 @@ class Book {
     @CompileDynamic
     static Book createWithMetaProgramming() {
         final def book = new Book(title:"the stand");
+        // class metaClass
+        Book.metaClass.getTitleUp = { -> "${title.capitalize()} changed by class metaClass" }
         // object metaClass
-        book.metaClass.getTitleUp = {-> title.toUpperCase() }
+        book.metaClass.getTitleUp = { -> "${title.toUpperCase()} changed by object metaClass" }
         return book
     }
 }

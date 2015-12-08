@@ -10,7 +10,15 @@ class TestGroovyClass {
     }
 
     @CompileDynamic
+    public String tryMetaProgrammingWithCompileDynamic() {
+        Book.createWithMetaProgramming().titleUp
+    }
+
     public String tryMetaProgramming() {
         Book.createWithMetaProgramming().titleUp
+    }
+
+    public String tryMetaProgrammingWithGetProperty() {
+        Book.createWithMetaProgramming().getProperty('titleUp')
     }
 }
