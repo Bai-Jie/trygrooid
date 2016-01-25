@@ -1,0 +1,33 @@
+afterEvaluate {
+    synchronizeJavaCompileClasspath()
+}
+
+tasks.all { task ->
+    task.doLast {
+        if (javaCompileClasspathChanged()) {
+            println '----------------------------------------'
+            println "[classpath]$task changed javaCompileClasspath"
+
+            println "\nbefore change:"
+            println javaCompileClasspath.toString().replace(', ', ',\n')
+
+            synchronizeJavaCompileClasspath()
+
+            println "\nafter change:"
+            println javaCompileClasspath.toString().replace(', ', ',\n')
+            println '----------------------------------------'
+        }
+    }
+}
+
+boolean javaCompileClasspathChanged() {
+    project.javaCompileClasspath != getDebugVariant().javaCompiler.classpath.files
+}
+
+def synchronizeJavaCompileClasspath() {
+    project.ext.javaCompileClasspath = new HashSet(getDebugVariant().javaCompiler.classpath.files)
+}
+
+def getDebugVariant() {
+    project.android.applicationVariants.find{it.name == 'debug'}
+}

@@ -16,6 +16,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.getkeepsafe.dexcount'
 apply plugin: 'groovyx.grooid.groovy-android'
 
+if(project.hasProperty('checkClasspathChange')) {
+    apply from: 'check-classpath-change.gradle'
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
