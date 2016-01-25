@@ -1,15 +1,11 @@
 buildscript {
     repositories {
         jcenter()
-        // see the comment in dependencies
-        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
         classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.3.0'
-        // use snapshot version for compatibility with latest android gradle plugin
-//        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
-        classpath 'com.github.groovy:groovy-android-gradle-plugin:-SNAPSHOT'
+        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.7'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
